@@ -7,6 +7,7 @@ int contador = 0;
 
 void setup() 
 {
+    int numero1;
     int *ptrnumero1;       // cria o ponteiro ptrnumero1
     int numero2;
     ptrnumero1 = &numero1;  // armazena em ptrnumero o endereço de memória da variável numero1
