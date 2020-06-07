@@ -1,10 +1,12 @@
 /*
-Programa para mostrar um conjunto de caracteres
+Programa para mostrar 4 formas de imprimir no monitor serial um conjunto de caracteres
 */
 
 void setup() 
 {
     char palavra[11] = {'O', 'l', 'a', ' ', 'M', 'u', 'n', 'd', 'o', '!', '\0'};
+    char *ponteiro;  // cria a variável ponteiro; do tipo ponteiro que aponta para uma variável do tipo char
+    ponteiro = palavra; // inicializa o ponteiro com o conjunto (Array) palavra, que é do tipo char
     int i;
     Serial.begin(115200);        
     for (i = 0;i<11;i++)
@@ -35,6 +37,14 @@ for (i = 0;i<11;i++)
                                                      endereço 0 +2*1; ... ; endereço 0 + 10*1
                                                   */
    }
+
+Serial.print ("\n");
+
+for (i = 0;i<11;i++)
+    {
+      Serial.print(*ponteiro++); /* A função Serial.print impreme o conteúdo para o qual o ponteiro aponta, e que é atualizado a cada loop
+                                                  */
+   }   
 }
 
 void loop()
