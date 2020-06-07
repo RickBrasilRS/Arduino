@@ -1,5 +1,9 @@
 /*
+<<<<<<< Updated upstream
 Programa para mostrar 4 formas de imprimir no monitor serial um conjunto de caracteres
+=======
+Programa para mostrar 5 formas de imprimir no monitor serial um conjunto de caracteres
+>>>>>>> Stashed changes
 */
 
 void setup() 
@@ -45,6 +49,17 @@ for (i = 0;i<11;i++)
       Serial.print(*ponteiro++); /* A função Serial.print impreme o conteúdo para o qual o ponteiro aponta, e que é atualizado a cada loop
                                                   */
    }   
+<<<<<<< Updated upstream
+=======
+
+Serial.print ("\n");
+ponteiro = palavra; // o ponteiro deve ser inicializado novamente antes de ser usado na sequencia
+while (*ponteiro) // O loop continua até que seja encontrado o valor null (\0) no array.
+    {
+      Serial.print(*ponteiro++); /* A função Serial.print impreme o conteúdo para o qual o ponteiro aponta, e que é atualizado a cada loop
+                                                */
+   }   
+>>>>>>> Stashed changes
 }
 
 void loop()
